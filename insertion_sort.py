@@ -1,12 +1,12 @@
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
-        j = i-1
+        min = i-1
         
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j+1] = key
+        while min >= 0 and key < arr[min]:
+            arr[min + 1] = arr[min]
+            min -= 1
+        arr[min+1] = key
 
 arr = [12, 11, 13, 5, 6]
 insertion_sort(arr)
